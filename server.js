@@ -6,11 +6,11 @@ var mongojs = require('mongojs');
 
 var app = express();
 
-var mongodbConnectionString = process.env.OPENSHIFT_MONGODB_DB_URL + "mymeancrud";
+var mongodbConnectionString = process.env.OPENSHIFT_MONGODB_DB_URL + "mycrudmean";
 
 if (typeof mongodbConnectionString == "undefined")
 {
-    mongodbConnectionString = "mymeancrud";
+    mongodbConnectionString = "mycrudmean";
 }
 
 var db = mongojs(mongodbConnectionString, ["serviceData"]);
